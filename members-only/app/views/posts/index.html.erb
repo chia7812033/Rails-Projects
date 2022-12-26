@@ -1,0 +1,17 @@
+<% @posts.each do |post| %>
+  <div>
+    <h1><%= post.title %></h1>
+    <h3><%= post.body %></h3>
+    <% if @user %>
+      <%= post.user.email %>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to "New post", new_post_path%>
+
+<% if @user %>
+  <%= link_to "Sign out", destroy_user_session_path %>
+<% else %>
+  <%= link_to "Sign in", new_user_session_path %>
+<% end %>
