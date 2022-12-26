@@ -1,24 +1,9 @@
-# README
+# Micro reddit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Learn something about model in rails
 
-Things you may want to cover:
+Make some users. 
 
-* Ruby version
+Each user have some posts.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Also, user can have some comments under each post.
