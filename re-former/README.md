@@ -1,24 +1,9 @@
-# README
+# Re-former
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I make some form practice in this small project.
 
-Things you may want to cover:
+By making ordinary form, 
 
-* Ruby version
+and then making form by form_tag,
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Finally, combine form with model.
