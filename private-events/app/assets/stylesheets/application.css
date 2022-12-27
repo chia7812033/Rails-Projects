@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-size: 24px;
+  gap: 8px;
+}
+
+input {
+  height: 28px;
+  width: 100%;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.location_input {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.location_input {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.submit-button {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+input[type=submit] {
+  width: 180px;
+  height: 32px;
+  background-color: aqua;
+  font-size: 18px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 16px;
+}
+
+b {
+  font-size: 18px;
+}
+
+.event-list {
+  margin-bottom: 10px;
+}

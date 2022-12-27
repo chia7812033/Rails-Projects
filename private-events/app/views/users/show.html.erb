@@ -1,0 +1,10 @@
+<h1>My Events</h1>
+
+<div>
+  <% @events.each do |event| %>
+    <div>
+      <b><%= event.location %></b>
+      <%= event.date %>
+    </div>
+  <% end %>
+</div>

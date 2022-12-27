@@ -1,0 +1,15 @@
+<h1>All Events</h1>
+
+<div class="event-list">
+  <% @events.each do |event| %>
+    <div>
+      <b><%= event.location %></b>
+      <%= event.date %>
+      <%= event.creator.username %>
+    </div>
+  <% end %>
+</div>
+
+<% if current_user %>
+  <%= link_to "Create new event", new_event_path %>
+<% end %>

@@ -1,0 +1,23 @@
+<h1>Create New event</h1>
+
+<div>
+  <%= form_with model: @event do |f| %>
+    <div class="location-label">
+      <%= f.label :location %>
+    </div>
+    <div class="location_input">
+      <%= f.text_field :location %>
+    </div>
+
+    <div class="date-label">
+      <%= f.label :date %>
+    </div>
+    <div class="date_input">
+      <%= f.date_field :date%>
+    </div>
+
+    <div class="submit-button">
+      <%= f.submit%>
+    </div>
+  <% end %>
+</div>
