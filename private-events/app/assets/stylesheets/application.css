@@ -63,6 +63,11 @@ input[type=submit] {
   font-size: 18px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   border-radius: 16px;
+  border: none;
+}
+
+input[type=submit]:hover {
+  border: 2px solid black;
 }
 
 b {
@@ -71,4 +76,8 @@ b {
 
 .event-list {
   margin-bottom: 10px;
+}
+
+.event-detail {
+  width: 500px;
 }

@@ -1,0 +1,19 @@
+<div>
+  <h1><%= @event.location %></h1>
+  <h3>Host: <%= @event.creator.username %></h3>
+  <p class="event-detail">Detail: <%= @event.detail %></p>
+</div>
+
+<div>
+  <% if @event.attendees.exists?(current_user.id) %>
+    <%= form_with url: "/registrations/#{@event.id}", method: :delete do |f| %>
+      <%= f.hidden_field :attended_event, :value => @event.id %>
+      <%= f.submit "Unregister" %>
+    <% end %>
+  <% else %>
+    <%= form_with url: "/registrations" do |f| %>
+      <%= f.hidden_field :attended_event, :value => @event.id %>
+      <%= f.submit "Register" %>
+    <% end %>
+  <% end %>
+</div>
