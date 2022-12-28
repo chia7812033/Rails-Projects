@@ -8,3 +8,15 @@
     </div>
   <% end %>
 </div>
+
+<div>
+  <h3>Joined Events</h3>
+  <ol>
+  <% @user.attended_event.each do |event| %>
+    <li>
+      <b><%= event.location %></b> Host: <%= event.creator.username %>
+    </li>
+  <% end %>
+  </ol>
+
+</div>

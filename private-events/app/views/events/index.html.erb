@@ -3,7 +3,7 @@
 <div class="event-list">
   <% @events.each do |event| %>
     <div>
-      <b><%= event.location %></b>
+      <%= link_to "#{event.location}", event %>
       <%= event.date %>
       <%= event.creator.username %>
     </div>
