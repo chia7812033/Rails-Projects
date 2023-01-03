@@ -1,43 +1,11 @@
 <h1>Search Flight</h1>
-
 <div class="container">
-
   <div>
-  <%= form_with model: @flight, method: :get do |f| %>
-
+    <%= render "search_form"  %>
+  </div>
+  <% if @flights.empty? == false %>
     <div>
-      <%= f.label :departure %>
-      <%= f.collection_select :departure, Airport.order(:code), :id, :code %>
+      <%= render "search_result_form" %>
     </div>
-
-    <div>
-      <%= f.label :arrival %>
-      <%= f.collection_select :arrival, Airport.order(:code), :id, :code %>
-    </div>
-
-    <div>
-      <%= f.label :passengers %>
-      <%= f.select :passengers, (1..4).to_a.map{|n| [n, n]} %>
-    </div>
-
-    <div>
-      <%= f.label :date %>
-      <%= f.select :date, Flight.pluck(:starttime).to_a.map{|n| [n, n]} %>
-    </div>
-
-    <div>
-      <%= f.submit "Search", name: ""%>
-    </div>
-
   <% end %>
-  </div>
-
-  <div>
-    <% @flights.each do |flight| %>
-      <%= flight.departure_airport.code %>
-      <%= flight.arrival_airport.code %>
-      <%= flight.duration %>
-      <%= flight.starttime %>
-    <% end %>
-  </div>
 </div>

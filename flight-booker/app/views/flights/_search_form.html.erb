@@ -1,0 +1,21 @@
+<%= form_with model: @flight, method: :get, class: "search-form" do |f| %>
+  <div>
+    <%= f.label :departure %>
+    <%= f.collection_select :departure, Airport.order(:code), :id, :code %>
+  </div>
+  <div>
+    <%= f.label :arrival %>
+    <%= f.collection_select :arrival, Airport.order(:code), :id, :code %>
+  </div>
+  <div>
+    <%= f.label :passengers %>
+    <%= f.select :passengers, (1..4).to_a.map{|n| [n, n]} %>
+  </div>
+  <div>
+    <%= f.label :date %>
+    <%= f.select :date, Flight.pluck(:starttime).to_a.map{|n| [n, n]} %>
+  </div>
+  <div>
+    <%= f.submit "Search", name: ""%>
+  </div>
+<% end %>

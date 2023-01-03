@@ -1,0 +1,16 @@
+<%= form_with url: "bookings/new/", method: "get" do |f| %>
+  <%= f.hidden_field :tickets, value: @tickets %>
+  <% @flights.each_with_index do |flight, idx| %>
+    <div>
+      <%= f.radio_button :flight, flight.id %>
+      <b>Flight <%= idx + 1 %></b>
+      <ul>
+        <li>Departure Airport: <%= flight.departure_airport.code %></li>
+        <li>Arrival Airport: <%= flight.arrival_airport.code %></li>
+        <li>Duration: <%= flight.duration %></li>
+        <li>Date: <%= flight.starttime %></li>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.submit "Select", name: "" %>
+<% end %>

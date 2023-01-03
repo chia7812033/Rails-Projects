@@ -22,8 +22,13 @@ body {
   width: 50%;
 }
 
-form {
+.search-form {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(4, 1fr);
- }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
