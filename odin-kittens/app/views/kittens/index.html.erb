@@ -5,5 +5,11 @@
 <% end %>
 
 <div class="action-btn">
-  <%= button_to "New Kitten", action: "new" %>
+  <%= button_to "New Kitten", new_kitten_path, :method => :get %>
 </div>
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>

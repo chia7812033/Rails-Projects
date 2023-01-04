@@ -3,6 +3,15 @@
 <%= render "kitten", kitten: @kitten %>
 
 <div class="action-btn" >
-  <%= button_to "Edit", action: "edit" %>
-  <%= button_to "Delete", action: "destroy" %>
+  <%= button_to "Edit", edit_kitten_path, :method => :get %>
+  <%= button_to "Delete", kitten_path(@kitten), :method => :delete, data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
 </div>
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>

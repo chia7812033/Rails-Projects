@@ -14,10 +14,20 @@
  *= require_self
  */
 
+ .kitten-block {
+  display: flex;
+ }
+
+.kitten-block div:nth-child(2) {
+  align-self: center;
+ }
+
 .kitten {
   border: 2px solid black;
   width: 200px;
   padding: 5px;
+  margin: 10px;
+  margin-left: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 50px;
 }
