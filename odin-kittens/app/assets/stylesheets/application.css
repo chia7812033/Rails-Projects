@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.kitten {
+  border: 2px solid black;
+  width: 200px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 50px;
+}
+
+.kitten div:nth-child(odd) {
+  grid-column: 1;
+}
+
+.kitten div:nth-child(even) {
+  grid-column: 2;
+}
+
+.action-btn {
+  display: flex;
+  margin-top: 8px;
+  gap: 10px
+}

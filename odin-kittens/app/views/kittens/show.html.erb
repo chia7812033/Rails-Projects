@@ -1,0 +1,8 @@
+<h1>This kitten</h1>
+
+<%= render "kitten", kitten: @kitten %>
+
+<div class="action-btn" >
+  <%= button_to "Edit", action: "edit" %>
+  <%= button_to "Delete", action: "destroy" %>
+</div>
