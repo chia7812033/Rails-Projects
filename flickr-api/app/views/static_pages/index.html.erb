@@ -1,0 +1,8 @@
+<%= render "form" %>
+<% unless params[:id].nil? %>
+  <% @photos.each do |photo| %>
+    <div>
+      <img src="<%= Flickr.url_z(photo) %>"/>
+    </div>
+  <% end %>
+<% end %>
